@@ -52,6 +52,9 @@ function headingLoc() {
   let alpha = e.alpha;
   let beta = e.beta;
   let gamma = e.gamma;
+    if (){
+      
+    }
   gif_wrapper.style.opacity = `${gamma}%`;
 });
   
