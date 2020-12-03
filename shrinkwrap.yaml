@@ -1,4 +1,5 @@
 dependencies:
+  core-js: 3.8.0
   gsap: 3.5.1
 devDependencies:
   '@babel/core': 7.12.9
@@ -2055,6 +2056,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-o9QKelQSxQMYWHXc/Gc4L8bx/4F7TTraE5rhuN8I7mKBt5dBIUpXpIR3omv70ebr8ST5R3PqbDQr+ZI3+Tt1FQ==
+  /core-js/3.8.0:
+    dev: false
+    requiresBuild: true
+    resolution:
+      integrity: sha512-W2VYNB0nwQQE7tKS7HzXd7r2y/y2SVJl4ga6oH/dnaLFzM0o2lB2P3zCkWj5Wc/zyMYjtgd5Hmhk0ObkQFZOIA==
   /core-util-is/1.0.2:
     dev: true
     resolution:
@@ -7425,6 +7431,7 @@ specifiers:
   babel-loader: ^8.0.6
   clean-webpack-plugin: ^3.0.0
   copy-webpack-plugin: ^5.1.1
+  core-js: ^3.6.5
   css-loader: ^3.5.3
   file-loader: ^6.0.0
   gsap: ^3.5.1

@@ -30,13 +30,11 @@ module.exports = {
       chunkFilename: "css/[id].css",
     }),
     new HtmlWebpackPlugin({
-      // Also generate a test.html
       filename: "index.html",
       template: "./src/index.html",
       chunks: ["main"],
     }),
     new HtmlWebpackPlugin({
-      // Also generate a test.html
       filename: "tema.html",
       template: "./src/tema.html",
       chunks: ["tema"],
