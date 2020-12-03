@@ -32,8 +32,8 @@ function headingLoc() {
     let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
     let ang = angleFromCoordinate(data.coords.latitude, data.coords.longitude, tema.lat, tema.lon);
       
-    image.style.opacity = `${opacityRng}%`;
-    txt.textContent = `${data.coords.heading} = ${opacityRng}`;
+    image.style.opacity = `${ang}%`;
+    txt.textContent = `${data.coords.heading} = ${opacityRng} | ${ang}`;
   }, err => {
       txt.textContent = `Website doesnt have access to your heading`;
       console.log(err)
