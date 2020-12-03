@@ -1,5 +1,5 @@
 import "../sass/tema.scss";
-const gsap = require("gsap");
+import { gsap } from "gsap/all";
 
 function headingLoc() {
   const image = document.querySelector("#image img");
@@ -28,38 +28,43 @@ function headingLoc() {
     return angleDeg;
   }
 
-    navigator.geolocation.watchPosition((data) => {
-    console.log(data.coords);
-    let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
-    let ang = angleFromCoordinate(data.coords.latitude, data.coords.longitude, tema.lat, tema.lon);
-      
-    // image.style.opacity = `${ang}%`;
-    // txt.textContent = `${data.coords.heading} = ${opacityRng} | ${ang}`;
-  }, err => {
-      console.log(err)
-    });
-  
-  
-//   let gyroscope = new Gyroscope({frequency: 60});
-//   gyroscope.addEventListener('reading', e => {
-//   txt.textContent = "Angular velocity along the Z-axis " + gyroscope.z;
-//   let opacity_Rng = range(gyroscope.z, -0, 1, 0, 100);
-//   gif_wrapper.style.opacity = `${opacity_Rng}%`;
-// });
-// gyroscope.start();
-  
-  window.addEventListener('deviceorientation', function(e) 
-{
-  let alpha = e.alpha;
-  let beta = e.beta;
-  let gamma = e.gamma;
-    if (gamma >= 0 ){
+  navigator.geolocation.watchPosition(
+    (data) => {
+      console.log(data.coords);
+      let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
+      let ang = angleFromCoordinate(
+        data.coords.latitude,
+        data.coords.longitude,
+        tema.lat,
+        tema.lon
+      );
+
+      // image.style.opacity = `${ang}%`;
+      // txt.textContent = `${data.coords.heading} = ${opacityRng} | ${ang}`;
+    },
+    (err) => {
+      console.log(err);
+    }
+  );
+
+  //   let gyroscope = new Gyroscope({frequency: 60});
+  //   gyroscope.addEventListener('reading', e => {
+  //   txt.textContent = "Angular velocity along the Z-axis " + gyroscope.z;
+  //   let opacity_Rng = range(gyroscope.z, -0, 1, 0, 100);
+  //   gif_wrapper.style.opacity = `${opacity_Rng}%`;
+  // });
+  // gyroscope.start();
+
+  window.addEventListener("deviceorientation", function (e) {
+    let alpha = e.alpha;
+    let beta = e.beta;
+    let gamma = e.gamma;
+    if (gamma >= 0) {
       gif_wrapper.style.opacity = `${gamma}%`;
     } else {
-      gif_wrapper.style.opacity = `${-(gamma)}%`;
+      gif_wrapper.style.opacity = `${-gamma}%`;
     }
-});
-  
+  });
 }
 
 function imgSlider() {
@@ -69,13 +74,14 @@ function imgSlider() {
     const img = document.createElement("img");
     if (counter <= 100) {
       container.innerHTML = "";
+      img.classList.add("image_show");
       img.setAttribute("src", `img/t/img_${counter}.png`);
       container.appendChild(img);
       counter++;
     } else {
       counter = 1;
     }
-    setTimeout(move, 10000);
+    setTimeout(move, 20000);
   }
   move();
 }
