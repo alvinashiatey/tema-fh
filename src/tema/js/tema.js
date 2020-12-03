@@ -2,7 +2,6 @@ import "../sass/tema.scss";
 
 function headingLoc() {
   const image = document.querySelector("#image img");
-  const txt = document.getElementById("testing");
   const gif_wrapper = document.querySelector(".gif-wrapper");
   const tema = {
     lat: 5.6249375,
@@ -36,17 +35,25 @@ function headingLoc() {
     // image.style.opacity = `${ang}%`;
     // txt.textContent = `${data.coords.heading} = ${opacityRng} | ${ang}`;
   }, err => {
-      txt.textContent = `Website doesnt have access to your heading`;
       console.log(err)
     });
   
-  let gyroscope = new Gyroscope({frequency: 60});
-  gyroscope.addEventListener('reading', e => {
-  txt.textContent = "Angular velocity along the Z-axis " + gyroscope.z;
-  let opacity_Rng = range(gyroscope.z, -0, 1, 0, 100);
-  gif_wrapper.style.opacity = `${opacity_Rng}%`;
+  
+//   let gyroscope = new Gyroscope({frequency: 60});
+//   gyroscope.addEventListener('reading', e => {
+//   txt.textContent = "Angular velocity along the Z-axis " + gyroscope.z;
+//   let opacity_Rng = range(gyroscope.z, -0, 1, 0, 100);
+//   gif_wrapper.style.opacity = `${opacity_Rng}%`;
+// });
+// gyroscope.start();
+  
+  window.addEventListener('deviceorientation', function(e) 
+{
+  let alpha = e.alpha;
+  let beta = e.beta;
+  let gamma = e.gamma;
+  gif_wrapper.style.opacity = `${gamma}%`;
 });
-gyroscope.start();
   
 }
 
