@@ -1,4 +1,5 @@
 import "../sass/tema.scss";
+const gsap = require("gsap");
 
 function headingLoc() {
   const image = document.querySelector("#image img");
@@ -52,10 +53,11 @@ function headingLoc() {
   let alpha = e.alpha;
   let beta = e.beta;
   let gamma = e.gamma;
-    if (){
-      
+    if (gamma >= 0 ){
+      gif_wrapper.style.opacity = `${gamma}%`;
+    } else {
+      gif_wrapper.style.opacity = `${-(gamma)}%`;
     }
-  gif_wrapper.style.opacity = `${gamma}%`;
 });
   
 }
