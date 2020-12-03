@@ -27,12 +27,13 @@ function headingLoc() {
     return angleDeg;
   }
 
-  navigator.geolocation.watchPosition((data) => {
+    navigator.geolocation.watchPosition((data) => {
     console.log(data.coords);
     let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
     image.style.opacity = `${opacityRng}%`;
-    txt.textContent = 'opacityRng';
+    txt.textContent = opacityRng;
   });
+
 }
 
 function imgSlider() {
