@@ -1,7 +1,7 @@
 import "../sass/tema.scss";
 
 function headingLoc() {
-  const image = document.querySelector(".image img");
+  const image = document.querySelector("#image img");
   const txt = document.getElementById("testing");
   const tema = {
     lat: 5.6249375,
@@ -32,7 +32,10 @@ function headingLoc() {
     let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
     image.style.opacity = `${opacityRng}%`;
     txt.textContent = `${data.coords.heading} = ${opacityRng}`;
-  });
+  }, err => {
+      txt.textContent = `Website doesnt have access to your heading`;
+      console.log(err)
+    });
   
 }
 
