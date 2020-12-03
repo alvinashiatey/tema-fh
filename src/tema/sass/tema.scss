@@ -38,9 +38,9 @@ body {
             will-change: opacity;
             mix-blend-mode: color-dodge;
             animation: show 1000ms ease-in-out;
-            transform: rotate(90deg);
           }
           .image_show {
+            transform: rotate(90deg) translateY(50%);
             @keyframes show {
               from {
                 opacity: 0%;
