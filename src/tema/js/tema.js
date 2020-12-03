@@ -2,6 +2,7 @@ import "../sass/tema.scss";
 
 function headingLoc() {
   const image = document.getElementById("image");
+  const txt = document.getElementById("testing");
   const tema = {
     lat: 5.6249375,
     lon: 0.0000625,
@@ -30,6 +31,7 @@ function headingLoc() {
     console.log(data.coords);
     let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
     image.style.opacity = `${opacityRng}%`;
+    txt.textContent = 'opacityRng';
   });
 }
 
