@@ -11,22 +11,30 @@ body {
       .image-conatiner{
         width: 100%;
         height: 100%;
-        .gif-wrapper{
-          img{
-            width: 100%;
-            height: 100%;
+        position: relative;
+          .gif-wrapper{
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+            img{
+              width: 100%;
+              height: 100%;
+            }
           }
-        }
         #image {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-          img {
-            width: 100%;
-            height: 100%;
-            opacity:50%;
-          }
-       }
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+            img {
+              width: 100%;
+              height: 100%;
+              mix-blend-mode: color-dodge;
+              opacity: 0;
+            }
+         } 
       } 
     }
   }
