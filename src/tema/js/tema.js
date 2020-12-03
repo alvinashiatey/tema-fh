@@ -30,6 +30,8 @@ function headingLoc() {
     navigator.geolocation.watchPosition((data) => {
     console.log(data.coords);
     let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
+    let ang = angleFromCoordinate(data.coords.latitude, data.coords.longitude, tema.lat, tema.lon);
+      
     image.style.opacity = `${opacityRng}%`;
     txt.textContent = `${data.coords.heading} = ${opacityRng}`;
   }, err => {
