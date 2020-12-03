@@ -42,6 +42,7 @@ function headingLoc() {
   let gyroscope = new Gyroscope({frequency: 60});
   gyroscope.addEventListener('reading', e => {
   txt.textContent = "Angular velocity along the Z-axis " + gyroscope.z;
+  let opacity_Rng = range(gyroscope.z, -0, 1, 0, 100);
   console.log("Angular velocity along the Y-axis " + gyroscope.y);
   console.log("Angular velocity along the Z-axis " + gyroscope.z);
 });
