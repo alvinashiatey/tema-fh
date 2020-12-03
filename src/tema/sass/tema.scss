@@ -33,14 +33,14 @@ body {
           height: 100%;
           object-fit: contain;
           img {
-            width: 100%;
+            width: 100vh;
             height: 100%;
             will-change: opacity;
             mix-blend-mode: color-dodge;
             animation: show 1000ms ease-in-out;
+            transform: rotate(90deg);
           }
           .image_show {
-            opacity: 0;
             @keyframes show {
               from {
                 opacity: 0%;
