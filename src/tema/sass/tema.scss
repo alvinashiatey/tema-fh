@@ -8,6 +8,7 @@ body {
     .wrapper {
       width: 100vw;
       height: 100vh;
+      position: relative;
       .image-conatiner {
         width: 100%;
         height: 100%;
@@ -49,6 +50,22 @@ body {
               to {
                 opacity: 100%;
               }
+            }
+          }
+        }
+      }
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        .footer-wrapper {
+          .dynamic-content {
+            width: 100vw;
+            height: 5em;
+            background: tomato;
+            object {
+              width: 5em;
+              height: 5em;
             }
           }
         }
