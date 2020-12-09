@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 125">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135 125"  style="padding-: 2rem" >
     <defs>
-        <style>.cls-1{fill:#231f20;}.cls-2{fill:none; margin:2rem;} #layer_2{margin-left:2rem;}</style>
+        <style>.cls-1{fill:white; margin:20rem;}.cls-2{fill:none; }</style>
     </defs>
     <g id="Layer_2" data-name="Layer 2">
         <g id="Layer_1-2" data-name="Layer 1">
