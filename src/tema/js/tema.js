@@ -90,9 +90,9 @@ function textGen() {
   function createSVG(i, d) {
     let cSVG = document.createElement("object");
     cSVG.type = "image/svg+xml";
-    cSVG.data = `img/t/svg/${i}.svg`;
+    cSVG.data = `img/t/svg/${i}`;
     cSVG.classList.add("type");
-    d.insertAdjacentText("beforeend", cSVG);
+    d.insertAdjacentElement("beforeend", cSVG);
   }
   let txt = ["Suro nipa", "dromɔ ", "nyame ndae "];
   let svgMap = {
@@ -120,7 +120,10 @@ function textGen() {
 
   for (const s of txt) {
     for (const i of s) {
-      console.log(i);
+      if (i.toUpperCase() in svgMap) {
+        console.log(svgMap[i.toUpperCase()]);
+        createSVG(svgMap[i.toUpperCase()], dynamicHolder);
+      }
     }
   }
 }
