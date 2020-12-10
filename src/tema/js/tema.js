@@ -97,7 +97,6 @@ function textGen() {
     cSVG.data = `img/t/svg/${i}`;
     cSVG.classList.add("type");
     d.insertAdjacentElement("beforeend", cSVG);
-    d.style.animation = "slide-left 20s linear infinite";
   }
   let txt = ["Suro", "nipa", "dromc", "nyame", "ndae"];
   let svgMap = {
