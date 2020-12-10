@@ -118,6 +118,7 @@ function textGen() {
     R: "R.svg",
     S: "S.svg",
     U: "U.svg",
+    Y: "Y.svg",
   };
   const dynamicHolder = document.querySelector(".dynamic-content");
 
