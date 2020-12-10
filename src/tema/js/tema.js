@@ -61,13 +61,12 @@ function headingLoc() {
     let alpha = e.alpha;
     let beta = e.beta;
     let gamma = e.gamma;
+    dynamicHolder.style.transform = `translateX(${-alpha}%)`;
+
     if (gamma >= 0) {
       gif_wrapper.style.opacity = `${gamma}%`;
-      dynamicHolder.style.transform = `translateX(${alpha}%)`;
     } else {
-      let a =  let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
       gif_wrapper.style.opacity = `${-gamma}%`;
-      dynamicHolder.style.transform = `translateX(${-alpha}%)`;
     }
   });
 }
