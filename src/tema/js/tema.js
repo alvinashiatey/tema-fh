@@ -88,6 +88,31 @@ function imgSlider() {
 
 function textGen() {
   let txt = ["Suro nipa", "dromɔ", "nyame ndae"];
+  let svgMap = {
+    A: "A.svg",
+    B: "B.svg",
+    C: "C.svg",
+    D: "D.svg",
+    E: "E.svg",
+    F: "F.svg",
+    G: "G.svg",
+    H: "H.svg",
+    I: "I.svg",
+    K: "K.svg",
+    L: "L.svg",
+    M: "M.svg",
+    N: "N.svg",
+    O: "O.svg",
+    P: "P.svg",
+    R: "R.svg",
+    S: "S.svg",
+    Sp: "Sp.svg",
+    U: "U.svg",
+  };
+  const dynamicHolder = document.querySelector(".dynamic-content");
+  for (const s of txt) {
+    console.log(s[0]);
+  }
 }
 
 function init() {
