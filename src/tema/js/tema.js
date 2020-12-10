@@ -87,7 +87,13 @@ function imgSlider() {
 }
 
 function textGen() {
-  let txt = ["Suro nipa", "dromɔ", "nyame ndae"];
+  function createSVG(i) {
+    let cSVG = document.createElement("object");
+    cSVG.setAttribute("type") = "image/svg+xml";
+    cSVG.setAttribute("data") = `img/t/svg/${i}.svg`;
+    cSVG.classList.add("type");
+  }
+  let txt = ["Suro nipa", "dromɔ ", "nyame ndae "];
   let svgMap = {
     A: "A.svg",
     B: "B.svg",
@@ -110,12 +116,17 @@ function textGen() {
     U: "U.svg",
   };
   const dynamicHolder = document.querySelector(".dynamic-content");
+
   for (const s of txt) {
-    console.log(s[0]);
+    for (const i of s) {
+      console.log(i);
+      dynamicHolder.insertAdjacentText("beforeend", i);
+    }
   }
 }
 
 function init() {
+  textGen();
   imgSlider();
   headingLoc();
 }
