@@ -57,13 +57,26 @@ body {
       footer {
         position: absolute;
         background: tomato;
-        top: -1.5em;
-        left: 0;
-        transform: rotate(90deg) translateX(50%);
+        width: 100vh;
+        top: 0;
+        right: 0;
+        left: -50%;
+        transform: rotate(90deg) translateX(45%);
         overflow: hidden;
         margin: 0;
         padding: 0;
         .footer-wrapper {
+          overflow: scroll;
+
+          @keyframes move {
+            from {
+              opacity: 0%;
+            }
+
+            to {
+              opacity: 100%;
+            }
+          }
           .dynamic-content {
             width: 100vw;
             height: 5em;
