@@ -81,9 +81,13 @@ function imgSlider() {
     } else {
       counter = 1;
     }
-    setTimeout(move, 20000);
+    setTimeout(move, 5000);
   }
   move();
+}
+
+function textGen() {
+  let txt = ["Suro nipa", "dromɔ", "nyame ndae"];
 }
 
 function init() {
