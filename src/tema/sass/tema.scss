@@ -68,12 +68,12 @@ body {
         padding: 0;
         .footer-wrapper {
           overflow: scroll;
-          animation: move 5000ms ease-in-out;
           .dynamic-content {
             width: 100vw;
             height: 5em;
             display: flex;
             flex-direction: row;
+            animation: move 5000ms ease-in-out;
             .type {
               color: black;
               width: 5rem;
@@ -89,7 +89,7 @@ body {
   // Animations
   @keyframes move {
     from {
-      transform: translateX(100%);
+      transform: translateX(-100%);
     }
     to {
       transform: translateX(0%);
