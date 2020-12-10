@@ -4,6 +4,8 @@ import { gsap } from "gsap/all";
 function headingLoc() {
   const image = document.querySelector("#image img");
   const gif_wrapper = document.querySelector(".gif-wrapper");
+  const dynamicHolder = document.querySelector(".dynamic-content");
+
   const tema = {
     lat: 5.6249375,
     lon: 0.0000625,
@@ -61,8 +63,10 @@ function headingLoc() {
     let gamma = e.gamma;
     if (gamma >= 0) {
       gif_wrapper.style.opacity = `${gamma}%`;
+      dynamicHolder.style.transform = `translateX(${beta}%)`;
     } else {
       gif_wrapper.style.opacity = `${-gamma}%`;
+      dynamicHolder.style.transform = `translateX(${-beta}%)`;
     }
   });
 }
