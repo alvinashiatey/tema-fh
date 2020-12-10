@@ -58,6 +58,7 @@ body {
         position: absolute;
         bottom: 0;
         left: 0;
+        transform: rotate(90deg) translateY(50%);
         .footer-wrapper {
           .dynamic-content {
             width: 100vw;
