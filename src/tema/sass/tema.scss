@@ -57,6 +57,7 @@ body {
       footer {
         position: absolute;
         background: tomato;
+        filter: invert(100%);
         width: 100vh;
         top: 0;
         right: 0;
@@ -67,22 +68,14 @@ body {
         padding: 0;
         .footer-wrapper {
           overflow: scroll;
-
-          @keyframes move {
-            from {
-              opacity: 0%;
-            }
-
-            to {
-              opacity: 100%;
-            }
-          }
+          animation: move 5000ms ease-in-out;
           .dynamic-content {
             width: 100vw;
             height: 5em;
             display: flex;
             flex-direction: row;
             .type {
+              color: black;
               width: 5rem;
               height: 5rem;
               margin-right: -1.2em;
@@ -90,6 +83,16 @@ body {
           }
         }
       }
+    }
+  }
+
+  // Animations
+  @keyframes move {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
     }
   }
 }
