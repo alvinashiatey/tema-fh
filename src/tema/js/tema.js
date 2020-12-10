@@ -63,10 +63,11 @@ function headingLoc() {
     let gamma = e.gamma;
     if (gamma >= 0) {
       gif_wrapper.style.opacity = `${gamma}%`;
-      dynamicHolder.style.transform = `translateX(${beta}%)`;
+      dynamicHolder.style.transform = `translateX(${alpha}%)`;
     } else {
+      let a =  let opacityRng = range(data.coords.heading, 0, 360, 0, 100);
       gif_wrapper.style.opacity = `${-gamma}%`;
-      dynamicHolder.style.transform = `translateX(${-beta}%)`;
+      dynamicHolder.style.transform = `translateX(${-alpha}%)`;
     }
   });
 }
@@ -98,7 +99,7 @@ function textGen() {
     cSVG.classList.add("type");
     d.insertAdjacentElement("beforeend", cSVG);
   }
-  let txt = ["Suro nipa", "dromɔ ", "nyame ndae "];
+  let txt = ["Suro", "nipa", "dromc", "nyame", "ndae"];
   let svgMap = {
     A: "A.svg",
     B: "B.svg",
@@ -117,7 +118,6 @@ function textGen() {
     P: "P.svg",
     R: "R.svg",
     S: "S.svg",
-    Sp: "Sp.svg",
     U: "U.svg",
   };
   const dynamicHolder = document.querySelector(".dynamic-content");
@@ -129,6 +129,7 @@ function textGen() {
         createSVG(svgMap[i.toUpperCase()], dynamicHolder);
       }
     }
+    createSVG("Sp.svg", dynamicHolder);
   }
 }
 
