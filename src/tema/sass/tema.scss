@@ -56,20 +56,23 @@ body {
       }
       footer {
         position: absolute;
-        bottom: 0;
+        background: tomato;
+        top: -1.5em;
         left: 0;
-        transform: rotate(90deg) translateY(50%);
+        transform: rotate(90deg) translateX(50%);
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
         .footer-wrapper {
           .dynamic-content {
             width: 100vw;
             height: 5em;
-            background: tomato;
             display: flex;
             flex-direction: row;
             .type {
               width: 5rem;
               height: 5rem;
-              margin-right: -1.5rem;
+              margin-right: -1.2em;
             }
           }
         }
