@@ -83,7 +83,6 @@ body {
         }
       }
     }
-
     .wrapper-desktop {
       background: white;
       width: 100vw;
@@ -91,21 +90,25 @@ body {
       overflow: hidden;
       position: relative;
       font-family: "Druk";
-
-      .b-container {
+      .main-desk{
         object-fit: contain;
+        width: 100vw;
+        height: 100vh;
+         img {
+          will-change: opacity;
+          width: 100%;
+          height: 100%;
+          opacity: 0.9;
+        }
+      }
+      .b-container {
         width: 70vw;
         height: 25vh;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        img {
-          will-change: opacity;
-          width: 100%;
-          height: 100%;
-          opacity: 0.5;
-        }
+        background: white;
       }
     }
   }
