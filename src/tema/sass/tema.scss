@@ -89,6 +89,13 @@ body {
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      .b-container {
+        margin: auto;
+        width: 70vw;
+        height: 25vh;
+        background: tomato;
+        transform: translateY(50vh);
+      }
     }
   }
 
