@@ -5,6 +5,24 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    position: relative;
+
+    .title-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 21;
+      .title {
+        font-family: "Druk";
+        font-size: 5rem;
+        color: #fefefe;
+        margin: 0;
+        padding: 0;
+        &:hover {
+          letter-spacing: 15rem;
+        }
+      }
+    }
     .wrapper-mobile {
       width: 100vw;
       height: 100vh;
@@ -90,11 +108,12 @@ body {
       overflow: hidden;
       position: relative;
       font-family: "Druk";
-      .main-desk{
+
+      .main-desk {
         object-fit: contain;
         width: 100vw;
         height: 100vh;
-         img {
+        img {
           will-change: opacity;
           width: 100%;
           height: 100%;
