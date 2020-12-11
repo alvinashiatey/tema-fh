@@ -1,5 +1,6 @@
 import "../sass/tema.scss";
 import { gsap } from "gsap/all";
+import "../font/Druk Wide Super.otf";
 
 function headingLoc() {
   const image = document.querySelector("#image img");
