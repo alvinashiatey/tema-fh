@@ -9,24 +9,25 @@ body {
 
     .title-container {
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 21;
-      width: 90rem;
+      top: 50%;
+      z-index: 23;
+      width: 70vw;
       margin: 0 auto;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 100% 100%;
+
       .title {
         font-family: "Druk";
-        font-size: 5rem;
-        color: #fefefe;
+        font-size: 6vw;
         margin: 0;
         padding: 0;
-        transition: 1000ms ease-in-out;
-        &:hover {
-          letter-spacing: 10rem;
-          cursor: pointer;
-        }
+        letter-spacing: 0.7em;
+        text-align: center;
       }
     }
     .wrapper-mobile {
@@ -34,6 +35,10 @@ body {
       height: 100vh;
       position: relative;
       visibility: hidden;
+      @media only screen and (max-width: 667px) {
+        display: block;
+        visibility: visible;
+      }
       .image-conatiner {
         width: 100%;
         height: 100%;
@@ -114,11 +119,36 @@ body {
       overflow: hidden;
       position: relative;
       font-family: "Druk";
+      @media only screen and (max-width: 667px) {
+        display: none;
+        visibility: hidden;
+      }
 
       .main-desk {
         object-fit: contain;
         width: 100vw;
         height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+        .project_des {
+          position: absolute;
+          height: 100vh;
+          top: 0%;
+          left: 0%;
+          padding: 0 3rem;
+          z-index: 22;
+          overflow-x: scroll;
+          mix-blend-mode: exclusion;
+
+          p {
+            margin: 0;
+            font-size: 5vw;
+            color: #fefefe;
+            text-align: justify;
+            font-family: "Jenson";
+          }
+        }
         img {
           will-change: opacity;
           width: 100%;
@@ -127,14 +157,38 @@ body {
         }
       }
       .b-container {
-        width: 90rem;
-        height: 30rem;
+        width: 80vw;
+        height: 45vh;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: white;
-        z-index: 20;
+        z-index: 24;
+        #image {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            object-fit: cover;
+            animation: show 1000ms ease-in-out;
+            transition: 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            &:hover {
+              mix-blend-mode: difference;
+            }
+          }
+          .image_show {
+            @keyframes show {
+              from {
+                opacity: 0%;
+              }
+
+              to {
+                opacity: 100%;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -150,4 +204,9 @@ body {
       transform: translateX(-100%);
     }
   }
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
